@@ -14,12 +14,23 @@ body {
   background-image: url('images/body_bg.png');
 }
 
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
 h1 {
   font-size: 70px;
   font-weight: inherit;
   margin: 25px 0;
   text-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255);
 }
+h1 a, h1 a:hover, h1 a:active, h1 a:visited {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
 
 #content {
   
@@ -42,6 +53,9 @@ ol.navigation a {
   font-size: 18px;
   text-shadow: 0 0 2px #FFFFFF;
 }
+
+.main.navigation a:hover { color: #777777; }
+
 
 /* Myraid Pro look-alike font declarations */
 @font-face {
