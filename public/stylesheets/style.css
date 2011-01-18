@@ -31,9 +31,15 @@ h1 a, h1 a:hover, h1 a:active, h1 a:visited {
   outline: none;
 }
 
+h2 {
+  margin: 25px 0;
+  font-weight: inherit;
+}
+
 
 #content {
-  
+  font-size: 18px;
+  text-shadow: 0 0 2px #FFFFFF;
 }
 
 ol.navigation {
@@ -49,17 +55,4 @@ ol.navigation a {
   text-decoration: none;
 }
 
-.main.navigation {
-  font-size: 18px;
-  text-shadow: 0 0 2px #FFFFFF;
-}
-
 .main.navigation a:hover { color: #777777; }
-
-
-/* Myraid Pro look-alike font declarations */
-@font-face {
-  font-family: 'VegurRegular';
-  src: url('fonts/vegur/Vegur-R_0500.eot');
-  src: local('Vegur Regular'), local('Vegur-Regular'), url('fonts/vegur/Vegur-R_0500.ttf') format('truetype');
-}
