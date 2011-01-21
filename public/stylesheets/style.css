@@ -1,34 +1,52 @@
 /* Resets */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
 
-body {
-  width: 100%;
-  height: 100%;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* http://blog.gesteves.com/post/36097597/helvetica-neue-light */
-  font-weight: 300;
-  font-size: 14px;
-  text-align: center;
-  margin: 150px 0;
-  color: #555;
+html {
   background-color: lightgray;
   background-image: url('images/body_bg.png');
+}
+
+body {
+  width: 680px;
+  margin: 100px auto;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* http://blog.gesteves.com/post/36097597/helvetica-neue-light */
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  text-shadow: 0 1px 0 #DDDDDD;
+}
+body#index {
+  margin-top: 150px;
 }
 
 a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
-h1 {
+#index h1 {
   font-size: 70px;
   font-weight: inherit;
-  margin: 25px 0;
+  margin: 25px 0 0;
   text-shadow: 0px 0px 20px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255);
+  text-align: center;
 }
-h1 a, h1 a:hover, h1 a:active, h1 a:visited {
-  color: inherit;
-  background-color: inherit;
-  text-decoration: none;
-  outline: none;
+
+#index h2 {
+  margin-top: 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+#index #content {
+  font-size: 18px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: -30px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 300;
 }
 
 h2 {
@@ -36,11 +54,32 @@ h2 {
   font-weight: inherit;
 }
 
-
-#content {
-  font-size: 18px;
-  text-shadow: 0 0 2px #FFFFFF;
+p {
+  margin: 10px 0;
 }
+
+#content.sidebar {
+  margin-left: 200px;
+}
+
+#sidebar {
+  float: left;
+  margin-right: 20px;
+  margin-left: -200px;
+}
+
+#sidebar ol.links {
+  margin-top: -10px;
+}
+
+#sidebar ol {
+  list-style: none;
+}
+
+#sidebar ol li {
+  margin: 0.1em 0;
+}
+
 
 ol.navigation {
   list-style: none;
@@ -56,3 +95,13 @@ ol.navigation a {
 }
 
 .main.navigation a:hover { color: #777777; }
+
+.small {
+  font-size: 60%;
+}
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.clearfix:after { clear: both; }
+/* fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
