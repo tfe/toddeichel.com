@@ -67,6 +67,7 @@ p {
   float: left;
   margin-right: 20px;
   margin-left: -200px;
+  font-size: 19px;
 }
 
 #sidebar ol.links {
