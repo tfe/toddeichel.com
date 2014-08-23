@@ -1,5 +1,6 @@
 #!/bin/sh
 s3cmd sync _site/ s3://toddeichel.com/ \
+  --cf-invalidate \
   --delete-removed \
   --acl-public \
   --verbose \
