@@ -8,7 +8,7 @@ end
 
 desc 'Start server'
 task :server => :build do
-  sh 'jekyll serve'
+  sh 'jekyll serve -w -P ${PORT:-3000}'
 end
 
 desc 'Build and deploy'
