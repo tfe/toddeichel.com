@@ -23,6 +23,14 @@ a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
+/* http://stackoverflow.com/a/33596636/203773 */
+a.unstyled,
+a.unstyled:link,
+a.unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .splash h1 {
   font-size: 70px;
   font-weight: inherit;
