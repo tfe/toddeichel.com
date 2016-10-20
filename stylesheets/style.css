@@ -32,6 +32,10 @@ a.unstyled:hover {
   text-decoration: inherit;
 }
 
+img {
+  width: 100%;
+}
+
 .splash h1 {
   font-size: 65px;
   font-weight: inherit;
@@ -92,10 +96,6 @@ p:first-of-type {
   }
 }
 
-#sidebar img {
-  width: 100%;
-}
-
 #sidebar ol.links {
   margin-top: -10px;
 }
@@ -125,7 +125,72 @@ ol.navigation a {
   text-decoration: none;
 }
 
-.main.navigation a:hover { color: #777777; }
+@media (min-width: 400px) {
+  /* http://stackoverflow.com/a/19138704/203773 */
+  dl.horizontal dt {
+    float: left;
+    clear: left;
+    width: 170px;
+    text-align: right;
+  }
+
+  dl.horizontal dd {
+    margin-left: 200px;
+  }
+
+  dl.horizontal dd:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+dl.horizontal dt,
+dl.horizontal dd {
+  margin-bottom: 20px;
+}
+
+blockquote {
+  border-left: 5px solid #aaa;
+  margin: 1.5em 10px;
+  padding: 0em 10px;
+}
+
+blockquote .attribution {
+  font-style: italic;
+}
+
+img.logo {
+  width: auto;
+  min-width: 50px;
+  max-height: 60px;
+  max-width: 180px;
+}
+
+img.logo.downsize {
+  max-height: 40px;
+}
+
+.horizontal-logos {
+  text-align: center;
+}
+
+.horizontal-logos .logo {
+  display: inline-block;
+  margin: 15px;
+}
+
+@media (max-width: 400px) {
+  .horizontal-logos .logo {
+    display: block;
+    margin: 30px auto;
+  }
+}
+
+.footnote {
+  font-size: 90%;
+  font-style: italic;
+}
 
 .small {
   font-size: 60%;

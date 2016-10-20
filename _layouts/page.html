@@ -5,19 +5,21 @@ body_class: page sidebar
 
 <h1><a href="/" class="unstyled">Todd Eichel</a> &mdash; {{ page.human_title }}</h1>
 
-<div id="content" class="clearfix sidebar">
-  
-  <div id="sidebar">
-    <img src="/images/headshot@2x.jpg">
+<div id="content" class="clearfix {% unless page.no_sidebar %} sidebar {% endunless %}">
 
-    <p>Find me on&hellip;</p>
-    <ol class="links vertical">
-      <li><a href="http://www.github.com/tfe">GitHub</a></li>
-      <li><a href="http://stackoverflow.com/users/203773/tfe">Stack Overflow</a></li>
-      <li><a href="http://www.linkedin.com/in/toddeichel">LinkedIn</a></li>
-      <li><a href="http://www.twitter.com/toddeichel">Twitter</a></li>
-    </ol>
-  </div>
+  {% unless page.no_sidebar %}
+    <div id="sidebar">
+      <img src="/images/headshot@2x.jpg">
+
+      <p>Find me on&hellip;</p>
+      <ol class="links vertical">
+        <li><a href="http://www.github.com/tfe">GitHub</a></li>
+        <li><a href="http://stackoverflow.com/users/203773/tfe">Stack Overflow</a></li>
+        <li><a href="http://www.linkedin.com/in/toddeichel">LinkedIn</a></li>
+        <li><a href="http://www.twitter.com/toddeichel">Twitter</a></li>
+      </ol>
+    </div>
+  {% endunless %}
 
   <main>
     {{ content }}
